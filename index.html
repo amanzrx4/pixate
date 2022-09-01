@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixate</title>
+  </head>
+  <body>
+    <div class="h-screen w-screen flex justify-center items-center">
+      <div class="w-[600px] h-[600px] border border-1 border-red-400">
+        <button
+          id="paint"
+          class="mx-auto bg-blue-500 text-white px-4 py-2 rounded-lg z-10"
+        >
+          Paint
+        </button>
+        <button
+          id="clear"
+          class="mx-auto bg-pink-500 text-white px-4 py-2 rounded-lg z-10"
+        >
+          Clear
+        </button>
+
+        <label class="text-black text-xl ml-4" for="stroke-select">
+          Select Stroke width:
+        </label>
+        <select
+          class="bg-blue-500 px-4 py-2 rounded-lg"
+          name="stroke"
+          id="stroke-select"
+        >
+          <option value="1">2</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+        </select>
+
+        <hr class="border-red-500" />
+
+        <canvas class="mx-auto" width="600" height="600" id="pixate"></canvas>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
